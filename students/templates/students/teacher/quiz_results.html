@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load crispy_forms_tags humanize %}
 {% block title %}
-{% trans 'Results' %}
+{% trans 'Нәтижесі' %}
 {% endblock %}
 
 {% block content %}
@@ -10,17 +10,17 @@
     <div class="quizzes">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'teacher_quiz_change_list' %}">{% trans 'My quizzes' %}</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'teacher_quiz_change_list' %}">{% trans 'Менің тестерім' %}</a></li>
                 <li class="breadcrumb-item"><a href="{% url 'teacher_update_quiz' quiz.pk %}">{{ quiz.name }}</a></li>
-                <li class="breadcrumb-item" aria-current="page">{% trans 'Results' %}</li>
+                <li class="breadcrumb-item" aria-current="page">{% trans 'Нәтиже' %}</li>
             </ol>
         </nav>
 
-        <h2>{{ quiz.name }} {% trans 'results' %}</h2>
+        <h2>{{ quiz.name }} {% trans 'Нәтиже' %}</h2>
 
         <div class="card">
             <div class="card-header">
-              <strong>{% trans 'Taken Quizzes' %}</strong>
+              <strong>{% trans 'Жауап берілген тест' %}</strong>
               <span class="badge badge-pill badge-primary float-right">{% trans 'Average score' %}{{ quiz_score.average_score|default_if_none:0.0}} %</span>
             </div>
             <table class="table mb-0">
