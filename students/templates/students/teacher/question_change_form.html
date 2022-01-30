@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 {% block title %}
-{% trans 'Add question' %}
+{% trans 'Сұрақ қосу' %}
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
     <div class="quiz">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{% url 'teacher_quiz_change_list' %}">{% trans 'My quizzes' %}</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'teacher_quiz_change_list' %}">{% trans 'Менің тестерім' %}</a></li>
               <li class="breadcrumb-item"><a href="{% url 'teacher_update_quiz' quiz.pk %}">{{ quiz.name }}</a></li>
               <li class="breadcrumb-item active" aria-current="page">{{ question.text }}</li>
             </ol>
@@ -26,13 +26,13 @@
               <div class="card-header">
                 <div class="row">
                   <div class="col-8">
-                    <strong>{% trans 'Answers' %}</strong>
+                    <strong>{% trans 'Жауабы' %}</strong>
                   </div>
                   <div class="col-2">
-                    <strong>{% trans 'Correct ?' %}</strong>
+                    <strong>{% trans 'Дұрыс ?' %}</strong>
                   </div>
                   <div class="col-2">
-                    <strong>{% trans 'Delete ?' %}</strong>
+                    <strong>{% trans 'Жою ?' %}</strong>
                   </div>
                 </div>
               </div>
@@ -61,10 +61,10 @@
                 {% endfor %}
               </div>
             </div>
-            <p>{% trans 'Your question must have at least 2 answers and maximum 10 answers. Select at least one correct answer.' %}</p>
-            <button class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full" type="submit">{% trans 'Save' %}</button>
-            <a href="{% url 'teacher_update_quiz' quiz.pk %}" class="btn btn-secondary" role="button">{% trans 'Go back' %}</a>
-            <a href="{% url 'teacher_delete_question' quiz.pk question.pk %}" class="btn btn-delete" role="button"><i class="icon icon-bin-2"></i>{% trans 'Delete' %}</a>
+            <p>{% trans 'Сіздің сұрағыңызда кемінде 2 жауап және ең көбі 10 жауап болуы керек. Кем дегенде бір дұрыс жауапты таңдаңыз.' %}</p>
+            <button class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full" type="submit">{% trans 'Сақтау' %}</button>
+            <a href="{% url 'teacher_update_quiz' quiz.pk %}" class="btn btn-secondary" role="button">{% trans 'Артқа' %}</a>
+            <a href="{% url 'teacher_delete_question' quiz.pk question.pk %}" class="btn btn-delete" role="button"><i class="icon icon-bin-2"></i>{% trans 'Жою' %}</a>
         </form>
     </div>
 </div>
