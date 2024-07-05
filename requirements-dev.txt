@@ -34,4 +34,6 @@ celery==4.4.1
 redis==3.4.1
 django-autoslug==1.9.7
 django-termsandconditions==1.2.15
-psycopg2
+psycopg2-binary
+whitenoise
+dj-database-url
