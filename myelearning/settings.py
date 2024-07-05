@@ -253,3 +253,4 @@ TERMS_STORE_IP_ADDRESS = True
 TERMS_BASE_TEMPLATE = 'base.html'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
