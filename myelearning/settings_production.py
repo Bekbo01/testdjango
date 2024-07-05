@@ -5,6 +5,12 @@ import dj_database_url
 DATABASES = {
   'default': dj_database_url.config()
 }
+DATABASES['default'].update({
+    'ENGINE': 'django.db.backends.postgresql',
+    'OPTIONS': {
+        'sslmode': 'require',
+    },
+})
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
