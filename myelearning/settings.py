@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'django.contrib.admindocs',
+    'django.contrib.postgres',
     'crispy_forms',
     'students',
     'embed_video',
